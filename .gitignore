@@ -1,0 +1,9 @@
+.ace-tool/
+.artifacts/
+.build/
+.DS_Store
+xcuserdata/
+*.xcuserstate
+docs/
+website/
+ROADMAP.md

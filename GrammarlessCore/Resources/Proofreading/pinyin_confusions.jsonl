@@ -1,0 +1,5 @@
+{"source":"我门","replacement":"我们","kind":"phoneticSimilarChar","tip":"“们”用于人称复数，“门”是名词。","confidence":0.99}
+{"source":"在次","replacement":"再次","kind":"phoneticSimilarChar","tip":"表示又一次时应写作“再次”。","confidence":0.96}
+{"source":"慢慢的走","replacement":"慢慢地走","kind":"phoneticSimilarChar","tip":"“地”用于修饰动作。","confidence":0.90}
+{"source":"以经","replacement":"已经","kind":"phoneticSimilarChar","tip":"“已经”表示事情完成或发生。","confidence":0.98}
+{"source":"再这里","replacement":"在这里","kind":"phoneticSimilarChar","tip":"表示位置时应使用“在”。","confidence":0.94}
