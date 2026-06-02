@@ -1,10 +1,14 @@
 # Grammarless
 
-Grammarless 是一个实验性的原生 macOS 写作助手，也是 Grammarly、秘塔写作猫这类写作辅助工具的开源替代版本。它通过 macOS Accessibility API 读取当前输入框上下文，在文字旁展示语法、拼写、改写和长文分析建议。
+Grammarless是Grammarly、秘塔写作猫这类写作辅助工具的开源平替。在任意输入场景都能纠错语法、拼写帮忙改写问题，支持双语。
+
+现只有Mac版因为我没windows电脑。
+
+项目起因：经常需要英文、中文写作，我不喜欢直接让AI帮我写完放进去，而是Grammarly这种无感的提示，但是Grammarly月费30刀而且对话功能一坨屎，还不支持中文，秘塔写作猫几年没更新了，就自己做了。
 
 项目定位：**开源、本地优先、BYOK（Bring Your Own Key，自带模型与密钥）**。仓库不内置 API Key，也不绑定特定模型厂商；你可以接入任意兼容 OpenAI `/v1/chat/completions` 的服务。
 
-> 当前版本是 `0.0.1` 开发者预览版，尚未 notarize。首次运行需要在 macOS 系统设置中授予 Accessibility 权限。
+> 当前版本是 `0.0.1` 尚未 notarize。首次运行需要在 macOS 系统设置中授予 Accessibility 权限。
 >
 > “Grammarly / 秘塔写作猫”仅用于说明产品定位；Grammarless 与上述产品或公司没有从属、合作或背书关系。
 
@@ -21,18 +25,18 @@ Grammarless 是一个实验性的原生 macOS 写作助手，也是 Grammarly、
 
 Grammarless 不提供托管模型，也不上传密钥。你需要在设置中配置自己的模型服务：
 
-- Base URL：任意 OpenAI-compatible endpoint，例如 `http://127.0.0.1:8317/v1`
+- Base URL：任意 OpenAI-compatible endpoint，默认 `http://127.0.0.1:8317/v1`
 - API Key：你自己的密钥，默认通过 Keychain 保存
 - Model：你的服务支持的模型名
 
-建议使用**响应快、价格低、上下文足够的快模型**，因为写作助手需要频繁、低延迟地处理选中文本和短上下文。长文分析可以切换到更强模型。
+建议使用快模型，因为写作助手需要频繁、低延迟地处理选中文本和短上下文。长文分析可以切换到更强模型。
 
 默认开发配置为：
 
 ```text
 Base URL: http://127.0.0.1:8317/v1
 Model: gpt-5.4-mini
-API Key: empty
+API Key: sk-xxx
 ```
 
 ## 语言处理策略
